@@ -34,7 +34,7 @@ namespace PE26A_VVGD_P1
 
         //Genera Matriz para ejercicios de llenado de matrices
         private void BtnPractica1P1_Click(object sender, EventArgs e)
-        { 
+        {
 
             int Tamaño;
             int AnchoConstante;
@@ -47,7 +47,7 @@ namespace PE26A_VVGD_P1
                 return;
             }
             Tamaño = Convert.ToInt32(TbxCaptura1.Text);
- 
+
             //Verifica el ancho constante de las columnas en campo 2
             if (!EsNumero(TbxCaptura2.Text))
             {
@@ -61,7 +61,7 @@ namespace PE26A_VVGD_P1
             DgvMatriz1.Columns.Clear();
             DgvMatriz1.Rows.Clear();
             RA = 0;
-            
+
             //Generar columnas Incrementa y decrementa
             for (int i = 0; i < Tamaño; i++)
             {
@@ -478,7 +478,7 @@ namespace PE26A_VVGD_P1
                 for (int c = 0; c < DgvMatriz2.Columns.Count; c++)
                 {
                     DgvMatriz2.Rows[RA].Cells[c].Style.BackColor = Color.Green;
-          
+
                 }
             }
             RA++;
@@ -500,7 +500,7 @@ namespace PE26A_VVGD_P1
                 return;
             }
             Tamaño = Convert.ToInt32(TbxCaptura1.Text);
-            for (int i=0;i<=Tamaño;i++)
+            for (int i = 0; i <= Tamaño; i++)
             {
                 BtnPractica4P2_Click(sender, EventArgs.Empty);
             }
@@ -648,7 +648,7 @@ namespace PE26A_VVGD_P1
         {
             int Altas = 0, Medias = 0, Bajas = 0, Valor;
 
-           //Recorre la matriz
+            //Recorre la matriz
             for (int r = 0; r < 5; r++)
             {
                 for (int c = 0; c <= 6; c++)
@@ -693,7 +693,10 @@ namespace PE26A_VVGD_P1
 
         #endregion
 
-
+        //---------------------------------------------------------------------------------------------------------------------
+        //----------------------------------------Region Temperaturas Boton 4--------------------------------------------------
+        //---------------------------------------------------------------------------------------------------------------------
+        #region
         //------------------------------------------------------------------------
         //Convierte grados centigrados a farenheit
         //------------------------------------------------------------------------
@@ -712,7 +715,7 @@ namespace PE26A_VVGD_P1
             return centigrados;
         }
 
-        //-----------------------------------------------------------Manejo de Funciones------------------------------------------------
+        //----------- Manejo de Funciones------------------------------------------------
         //------------------------------------------------------------------------
         //Boton Convertir Farenheit a Celcius --- Numeros
         //------------------------------------------------------------------------
@@ -738,7 +741,10 @@ namespace PE26A_VVGD_P1
             resultado = ConvertirGradosFAC(Convert.ToDouble(IngresarValorF.Text));
             ResultadoFarenheitAC.Text = resultado.ToString();
         }
+        #endregion
     }
+
+
 }
 
     

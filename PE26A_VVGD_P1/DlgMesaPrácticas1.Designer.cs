@@ -372,6 +372,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PnlPracticas1.BackColor = System.Drawing.Color.DarkOrange;
             this.PnlPracticas1.Controls.Add(this.BtnPractica1P3);
+            this.PnlPracticas1.Controls.Add(this.PnlPracticaGrados);
             this.PnlPracticas1.Controls.Add(this.BtnPractica1P2);
             this.PnlPracticas1.Controls.Add(this.BtnPractica1P1);
             this.PnlPracticas1.Controls.Add(this.DgvMatriz1);
@@ -750,7 +751,7 @@
             this.PnlPracticaGrados.Controls.Add(this.BtnFAC);
             this.PnlPracticaGrados.Controls.Add(this.ResultadoCelciusAF);
             this.PnlPracticaGrados.Controls.Add(this.BtnCAF);
-            this.PnlPracticaGrados.Location = new System.Drawing.Point(244, 132);
+            this.PnlPracticaGrados.Location = new System.Drawing.Point(74, 229);
             this.PnlPracticaGrados.Name = "PnlPracticaGrados";
             this.PnlPracticaGrados.Size = new System.Drawing.Size(920, 460);
             this.PnlPracticaGrados.TabIndex = 5;
@@ -835,7 +836,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1514, 778);
-            this.Controls.Add(this.PnlPracticaGrados);
             this.Controls.Add(this.PnlSuperior);
             this.Controls.Add(this.PnlInferior);
             this.Controls.Add(this.PnlIzquierdo);

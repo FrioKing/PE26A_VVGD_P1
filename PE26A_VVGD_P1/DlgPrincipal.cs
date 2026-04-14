@@ -226,7 +226,6 @@ namespace PE26A_VVGD_P1
                 // ¡Y que empiece la música!
                 player.controls.play();
             }
-        ShowDialog: buscarMusica.Title = "Selecciona tu música Cyberpunk";
         }
 
 
