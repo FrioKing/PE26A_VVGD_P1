@@ -31,7 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DlgMesaPrácticas2));
             this.PnlSuperior = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LblTxb3 = new System.Windows.Forms.Label();
+            this.LblTxb4 = new System.Windows.Forms.Label();
+            this.LblTxb2 = new System.Windows.Forms.Label();
+            this.LblTxb1 = new System.Windows.Forms.Label();
+            this.TbxCaptura4 = new System.Windows.Forms.TextBox();
             this.TbxCaptura2 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TbxCaptura3 = new System.Windows.Forms.TextBox();
@@ -48,6 +52,7 @@
             this.PnlCentral = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.PnlPracticas1 = new System.Windows.Forms.Panel();
+            this.Btn4Practica2P1 = new System.Windows.Forms.Button();
             this.DgvMatriz3 = new System.Windows.Forms.DataGridView();
             this.Btn3Practica2P1 = new System.Windows.Forms.Button();
             this.Btn2Practica2P1 = new System.Windows.Forms.Button();
@@ -64,8 +69,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.LblTxb1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.PnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PnlInferior.SuspendLayout();
@@ -82,9 +85,11 @@
             // PnlSuperior
             // 
             this.PnlSuperior.BackColor = System.Drawing.Color.Chocolate;
-            this.PnlSuperior.Controls.Add(this.label1);
+            this.PnlSuperior.Controls.Add(this.LblTxb3);
+            this.PnlSuperior.Controls.Add(this.LblTxb4);
+            this.PnlSuperior.Controls.Add(this.LblTxb2);
             this.PnlSuperior.Controls.Add(this.LblTxb1);
-            this.PnlSuperior.Controls.Add(this.textBox1);
+            this.PnlSuperior.Controls.Add(this.TbxCaptura4);
             this.PnlSuperior.Controls.Add(this.TbxCaptura2);
             this.PnlSuperior.Controls.Add(this.pictureBox1);
             this.PnlSuperior.Controls.Add(this.TbxCaptura3);
@@ -96,15 +101,51 @@
             this.PnlSuperior.Size = new System.Drawing.Size(911, 70);
             this.PnlSuperior.TabIndex = 0;
             // 
-            // textBox1
+            // LblTxb3
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox1.Location = new System.Drawing.Point(370, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "5";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LblTxb3.AutoSize = true;
+            this.LblTxb3.Location = new System.Drawing.Point(263, 13);
+            this.LblTxb3.Name = "LblTxb3";
+            this.LblTxb3.Size = new System.Drawing.Size(86, 20);
+            this.LblTxb3.TabIndex = 9;
+            this.LblTxb3.Text = "Renglones";
+            // 
+            // LblTxb4
+            // 
+            this.LblTxb4.AutoSize = true;
+            this.LblTxb4.Location = new System.Drawing.Point(382, 12);
+            this.LblTxb4.Name = "LblTxb4";
+            this.LblTxb4.Size = new System.Drawing.Size(51, 20);
+            this.LblTxb4.TabIndex = 8;
+            this.LblTxb4.Text = "Altura";
+            // 
+            // LblTxb2
+            // 
+            this.LblTxb2.AutoSize = true;
+            this.LblTxb2.Location = new System.Drawing.Point(154, 12);
+            this.LblTxb2.Name = "LblTxb2";
+            this.LblTxb2.Size = new System.Drawing.Size(55, 20);
+            this.LblTxb2.TabIndex = 7;
+            this.LblTxb2.Text = "Ancho";
+            // 
+            // LblTxb1
+            // 
+            this.LblTxb1.AutoSize = true;
+            this.LblTxb1.Location = new System.Drawing.Point(39, 9);
+            this.LblTxb1.Name = "LblTxb1";
+            this.LblTxb1.Size = new System.Drawing.Size(72, 20);
+            this.LblTxb1.TabIndex = 6;
+            this.LblTxb1.Text = "Columna";
+            // 
+            // TbxCaptura4
+            // 
+            this.TbxCaptura4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.TbxCaptura4.Location = new System.Drawing.Point(368, 39);
+            this.TbxCaptura4.Name = "TbxCaptura4";
+            this.TbxCaptura4.Size = new System.Drawing.Size(100, 26);
+            this.TbxCaptura4.TabIndex = 5;
+            this.TbxCaptura4.Text = "20";
+            this.TbxCaptura4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TbxCaptura2
             // 
@@ -113,7 +154,7 @@
             this.TbxCaptura2.Name = "TbxCaptura2";
             this.TbxCaptura2.Size = new System.Drawing.Size(100, 26);
             this.TbxCaptura2.TabIndex = 2;
-            this.TbxCaptura2.Text = "5";
+            this.TbxCaptura2.Text = "20";
             this.TbxCaptura2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1
@@ -155,7 +196,6 @@
             this.TbxCaptura1.TabIndex = 4;
             this.TbxCaptura1.Text = "5";
             this.TbxCaptura1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TbxCaptura1.TextChanged += new System.EventHandler(this.TbxCaptura1_TextChanged);
             // 
             // PnlInferior
             // 
@@ -270,6 +310,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PnlPracticas1.BackColor = System.Drawing.Color.DarkOrange;
+            this.PnlPracticas1.Controls.Add(this.Btn4Practica2P1);
             this.PnlPracticas1.Controls.Add(this.DgvMatriz3);
             this.PnlPracticas1.Controls.Add(this.Btn3Practica2P1);
             this.PnlPracticas1.Controls.Add(this.Btn2Practica2P1);
@@ -280,8 +321,19 @@
             this.PnlPracticas1.TabIndex = 3;
             this.PnlPracticas1.Visible = false;
             // 
+            // Btn4Practica2P1
+            // 
+            this.Btn4Practica2P1.Location = new System.Drawing.Point(27, 199);
+            this.Btn4Practica2P1.Name = "Btn4Practica2P1";
+            this.Btn4Practica2P1.Size = new System.Drawing.Size(85, 37);
+            this.Btn4Practica2P1.TabIndex = 4;
+            this.Btn4Practica2P1.Text = "P3";
+            this.Btn4Practica2P1.UseVisualStyleBackColor = true;
+            // 
             // DgvMatriz3
             // 
+            this.DgvMatriz3.AllowUserToAddRows = false;
+            this.DgvMatriz3.AllowUserToDeleteRows = false;
             this.DgvMatriz3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -449,24 +501,6 @@
             this.button3.Text = "P1";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // LblTxb1
-            // 
-            this.LblTxb1.AutoSize = true;
-            this.LblTxb1.Location = new System.Drawing.Point(39, 9);
-            this.LblTxb1.Name = "LblTxb1";
-            this.LblTxb1.Size = new System.Drawing.Size(67, 20);
-            this.LblTxb1.TabIndex = 6;
-            this.LblTxb1.Text = "Tamaño";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(154, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Ancho";
-            // 
             // DlgMesaPrácticas2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -535,8 +569,11 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.DataGridView DgvMatriz3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TbxCaptura4;
         private System.Windows.Forms.Label LblTxb1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblTxb2;
+        private System.Windows.Forms.Button Btn4Practica2P1;
+        private System.Windows.Forms.Label LblTxb3;
+        private System.Windows.Forms.Label LblTxb4;
     }
 }
