@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DlgMesaPrácticas2));
             this.PnlSuperior = new System.Windows.Forms.Panel();
+            this.LblTxb5 = new System.Windows.Forms.Label();
+            this.TbxCaptura5 = new System.Windows.Forms.TextBox();
             this.LblTxb3 = new System.Windows.Forms.Label();
             this.LblTxb4 = new System.Windows.Forms.Label();
             this.LblTxb2 = new System.Windows.Forms.Label();
@@ -52,7 +54,6 @@
             this.PnlCentral = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.PnlPracticas1 = new System.Windows.Forms.Panel();
-            this.Btn4Practica2P1 = new System.Windows.Forms.Button();
             this.DgvMatriz3 = new System.Windows.Forms.DataGridView();
             this.Btn3Practica2P1 = new System.Windows.Forms.Button();
             this.Btn2Practica2P1 = new System.Windows.Forms.Button();
@@ -66,13 +67,11 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.PnlPracticas2 = new System.Windows.Forms.Panel();
+            this.Btn4Practica2P2 = new System.Windows.Forms.Button();
+            this.DgvMatriz4 = new System.Windows.Forms.DataGridView();
             this.Btn3Practica2P2 = new System.Windows.Forms.Button();
             this.Btn2Practica2P2 = new System.Windows.Forms.Button();
             this.Btn1Practica2P2 = new System.Windows.Forms.Button();
-            this.DgvMatriz4 = new System.Windows.Forms.DataGridView();
-            this.Btn4Practica2P2 = new System.Windows.Forms.Button();
-            this.TbxCaptura5 = new System.Windows.Forms.TextBox();
-            this.LblTxb5 = new System.Windows.Forms.Label();
             this.PnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PnlInferior.SuspendLayout();
@@ -107,6 +106,25 @@
             this.PnlSuperior.Name = "PnlSuperior";
             this.PnlSuperior.Size = new System.Drawing.Size(911, 70);
             this.PnlSuperior.TabIndex = 0;
+            // 
+            // LblTxb5
+            // 
+            this.LblTxb5.AutoSize = true;
+            this.LblTxb5.Location = new System.Drawing.Point(526, 12);
+            this.LblTxb5.Name = "LblTxb5";
+            this.LblTxb5.Size = new System.Drawing.Size(160, 20);
+            this.LblTxb5.TabIndex = 9;
+            this.LblTxb5.Text = "Escribne una Palabra";
+            // 
+            // TbxCaptura5
+            // 
+            this.TbxCaptura5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.TbxCaptura5.Location = new System.Drawing.Point(511, 39);
+            this.TbxCaptura5.Name = "TbxCaptura5";
+            this.TbxCaptura5.Size = new System.Drawing.Size(324, 26);
+            this.TbxCaptura5.TabIndex = 10;
+            this.TbxCaptura5.Text = "HOLA";
+            this.TbxCaptura5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LblTxb3
             // 
@@ -184,7 +202,7 @@
             this.TbxCaptura3.Name = "TbxCaptura3";
             this.TbxCaptura3.Size = new System.Drawing.Size(100, 26);
             this.TbxCaptura3.TabIndex = 3;
-            this.TbxCaptura3.Text = "10";
+            this.TbxCaptura3.Text = "30";
             this.TbxCaptura3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel1
@@ -201,7 +219,7 @@
             this.TbxCaptura1.Name = "TbxCaptura1";
             this.TbxCaptura1.Size = new System.Drawing.Size(100, 26);
             this.TbxCaptura1.TabIndex = 4;
-            this.TbxCaptura1.Text = "10";
+            this.TbxCaptura1.Text = "33";
             this.TbxCaptura1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // PnlInferior
@@ -317,7 +335,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PnlPracticas1.BackColor = System.Drawing.Color.DarkOrange;
-            this.PnlPracticas1.Controls.Add(this.Btn4Practica2P1);
             this.PnlPracticas1.Controls.Add(this.DgvMatriz3);
             this.PnlPracticas1.Controls.Add(this.Btn3Practica2P1);
             this.PnlPracticas1.Controls.Add(this.Btn2Practica2P1);
@@ -327,16 +344,6 @@
             this.PnlPracticas1.Size = new System.Drawing.Size(881, 495);
             this.PnlPracticas1.TabIndex = 3;
             this.PnlPracticas1.Visible = false;
-            this.PnlPracticas1.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlPracticas1_Paint);
-            // 
-            // Btn4Practica2P1
-            // 
-            this.Btn4Practica2P1.Location = new System.Drawing.Point(27, 199);
-            this.Btn4Practica2P1.Name = "Btn4Practica2P1";
-            this.Btn4Practica2P1.Size = new System.Drawing.Size(85, 37);
-            this.Btn4Practica2P1.TabIndex = 4;
-            this.Btn4Practica2P1.Text = "P3";
-            this.Btn4Practica2P1.UseVisualStyleBackColor = true;
             // 
             // DgvMatriz3
             // 
@@ -361,7 +368,6 @@
             this.Btn3Practica2P1.TabIndex = 2;
             this.Btn3Practica2P1.Text = "P3";
             this.Btn3Practica2P1.UseVisualStyleBackColor = true;
-            this.Btn3Practica2P1.Click += new System.EventHandler(this.Btn3Practica2P1_Click);
             // 
             // Btn2Practica2P1
             // 
@@ -484,6 +490,30 @@
             this.PnlPracticas2.TabIndex = 4;
             this.PnlPracticas2.Visible = false;
             // 
+            // Btn4Practica2P2
+            // 
+            this.Btn4Practica2P2.Location = new System.Drawing.Point(28, 199);
+            this.Btn4Practica2P2.Name = "Btn4Practica2P2";
+            this.Btn4Practica2P2.Size = new System.Drawing.Size(85, 37);
+            this.Btn4Practica2P2.TabIndex = 5;
+            this.Btn4Practica2P2.Text = "P3";
+            this.Btn4Practica2P2.UseVisualStyleBackColor = true;
+            // 
+            // DgvMatriz4
+            // 
+            this.DgvMatriz4.AllowUserToAddRows = false;
+            this.DgvMatriz4.AllowUserToDeleteRows = false;
+            this.DgvMatriz4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DgvMatriz4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvMatriz4.Location = new System.Drawing.Point(137, 20);
+            this.DgvMatriz4.Name = "DgvMatriz4";
+            this.DgvMatriz4.RowHeadersWidth = 62;
+            this.DgvMatriz4.RowTemplate.Height = 28;
+            this.DgvMatriz4.Size = new System.Drawing.Size(714, 403);
+            this.DgvMatriz4.TabIndex = 4;
+            // 
             // Btn3Practica2P2
             // 
             this.Btn3Practica2P2.Location = new System.Drawing.Point(28, 136);
@@ -513,49 +543,6 @@
             this.Btn1Practica2P2.Text = "P1";
             this.Btn1Practica2P2.UseVisualStyleBackColor = true;
             this.Btn1Practica2P2.Click += new System.EventHandler(this.Btn1Panel2Practica2_Click);
-            // 
-            // DgvMatriz4
-            // 
-            this.DgvMatriz4.AllowUserToAddRows = false;
-            this.DgvMatriz4.AllowUserToDeleteRows = false;
-            this.DgvMatriz4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DgvMatriz4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvMatriz4.Location = new System.Drawing.Point(137, 20);
-            this.DgvMatriz4.Name = "DgvMatriz4";
-            this.DgvMatriz4.RowHeadersWidth = 62;
-            this.DgvMatriz4.RowTemplate.Height = 28;
-            this.DgvMatriz4.Size = new System.Drawing.Size(714, 403);
-            this.DgvMatriz4.TabIndex = 4;
-            // 
-            // Btn4Practica2P2
-            // 
-            this.Btn4Practica2P2.Location = new System.Drawing.Point(28, 199);
-            this.Btn4Practica2P2.Name = "Btn4Practica2P2";
-            this.Btn4Practica2P2.Size = new System.Drawing.Size(85, 37);
-            this.Btn4Practica2P2.TabIndex = 5;
-            this.Btn4Practica2P2.Text = "P3";
-            this.Btn4Practica2P2.UseVisualStyleBackColor = true;
-            // 
-            // TbxCaptura5
-            // 
-            this.TbxCaptura5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.TbxCaptura5.Location = new System.Drawing.Point(511, 39);
-            this.TbxCaptura5.Name = "TbxCaptura5";
-            this.TbxCaptura5.Size = new System.Drawing.Size(100, 26);
-            this.TbxCaptura5.TabIndex = 10;
-            this.TbxCaptura5.Text = "HOLA";
-            this.TbxCaptura5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // LblTxb5
-            // 
-            this.LblTxb5.AutoSize = true;
-            this.LblTxb5.Location = new System.Drawing.Point(526, 12);
-            this.LblTxb5.Name = "LblTxb5";
-            this.LblTxb5.Size = new System.Drawing.Size(160, 20);
-            this.LblTxb5.TabIndex = 9;
-            this.LblTxb5.Text = "Escribne una Palabra";
             // 
             // DlgMesaPrácticas2
             // 
@@ -629,7 +616,6 @@
         private System.Windows.Forms.TextBox TbxCaptura4;
         private System.Windows.Forms.Label LblTxb1;
         private System.Windows.Forms.Label LblTxb2;
-        private System.Windows.Forms.Button Btn4Practica2P1;
         private System.Windows.Forms.Label LblTxb3;
         private System.Windows.Forms.Label LblTxb4;
         private System.Windows.Forms.DataGridView DgvMatriz4;

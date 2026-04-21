@@ -20,9 +20,8 @@ namespace PE26A_VVGD_P1
         {
             InitializeComponent();
             DgvMatriz3.CellPainting += DgvMatriz1_CellPainting;
+            DgvMatriz4.CellPainting += DgvMatriz2_CellPainting;
         }
-
-
         //------------------------------------------------------------------------
         //--------Funciones de botones para mostrar y ocultar paneles de prácticas
         //------------------------------------------------------------------------
@@ -86,7 +85,7 @@ namespace PE26A_VVGD_P1
         }
         #endregion
         //---------------------------------------------------------------------------------------------
-        //----------------------------- Region, Boton 1 Practica 2-------------------------------------
+        //----------------------------- Region, Boton 1 Practica 2 Panel 3-------------------------------------
         //---------------------------------------------------------------------------------------------
         #region
         private void BtnPractica1P1_Click(object sender, EventArgs e)
@@ -160,10 +159,10 @@ namespace PE26A_VVGD_P1
 
         #endregion
         //---------------------------------------------------------------------------------------------
-        //----------------------------- Region, Boton 2 Practica 2-------------------------------------
-        //---------------------------------------------------------------------------------------------
+        //----------------------------- Region, Boton 2 Practica 2 Panel 3-------------------------------------
+        //DgvMatriz1_CellPainting-----------------------------------------------------------------------------
         #region
-        //Funcion de la segunda practica, llena la matriz con numeros aleatorios y resalta los 9 en rojo
+        //Funcion de la segunda practica, llena la matriz con numeros aleatorios
         private void Btn2Practica2P1_Click(object sender, EventArgs e)
         {
             int r = 0;
@@ -187,8 +186,8 @@ namespace PE26A_VVGD_P1
 
             }
         }
-        #endregion
-        //Esta Funcion sirve para crear lineas de colores a cordenadas 
+        
+        //Esta Funcion sirve para crear lineas de colores a cordenadas Randoms
         private void DgvMatriz1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
             Object Valor;
@@ -287,46 +286,13 @@ namespace PE26A_VVGD_P1
                 }
             }
         }
-
-        //---------------------------------------------------------------------------------------------
-        //----------------------------- Region, Boton 3 Practica 2-------------------------------------
-        //---------------------------------------------------------------------------------------------
-        //Dibuja lineas sobre la tabla apartir de un patron
-        #region
-        private void Btn3Practica2P1_Click(object sender, EventArgs e)
-        {
-
-        }
         #endregion
         //---------------------------------------------------------------------------------------------
-        //----------------------------- Region, Boton 1, Practica 2 Pnl4 -------------------------------------
-        private void Btn1Panel2Practica1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PnlPracticas1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Btn2Practica2P2_Click(object sender, EventArgs e)
-        {
-            int r = 0;
-            Random Random;
-            Random = new Random();
-            while (r < DgvMatriz4.RowCount)
-            {
-                int c = 0;
-                while (c < DgvMatriz4.ColumnCount)
-                {
-                    DgvMatriz4.Rows[r].Cells[c].Value = (char)Random.Next('A','Z'+1);
-                    c++;
-                }
-                r++;
-            }
-        }
-
+        //----------------------------- Region, Boton 1, Practica 2 Panel 4-------------------------------------
+        //-------------------------------------------------------------------------------------------------
+        #region
+        /*Genera la matriz dependiendo De los valores Dados en el diseñador 
+        y Valida los TexBox del diseñador sacando sus valores*/
         private void Btn1Panel2Practica2_Click(object sender, EventArgs e)
         {
             int Columnas;
@@ -388,15 +354,46 @@ namespace PE26A_VVGD_P1
                 DgvMatriz4.Rows[r].Height = AlturaConstante;
             }
         }
+        #endregion
+        //---------------------------------------------------------------------------------------------
+        //----------------------------- Region, Boton 2, Practica 2 Panel 4-------------------------------------
+        //-------------------------------------------------------------------------------------------------
+        #region
+        //LLena la matriz con letras aleatoreas
+        private void Btn2Practica2P2_Click(object sender, EventArgs e)
+        {
+            int r = 0;
+            Random Random;
+            Random = new Random();
+            while (r < DgvMatriz4.RowCount)
+            {
+                int c = 0;
+                while (c < DgvMatriz4.ColumnCount)
+                {
+                    DgvMatriz4.Rows[r].Cells[c].Value = (char)Random.Next('A', 'Z' + 1);
+                    DgvMatriz4.Rows[r].Cells[c].Style.BackColor = Color.White;
+                    c++;
+                }
+                r++;
+            }
 
+        }
+        //Traza lineas para pintar de amarillo 
+        #endregion
+        //---------------------------------------------------------------------------------------------
+        //----------------------------- Region, Boton 3, Practica 2 Panel 4-------------------------------------
+        //DgvMatriz2_CellPainting -------------------------------------------------------------------
+        #region
         private void Btn3Practica2P2_Click(object sender, EventArgs e)
         {
+            string Texto;
             int r;
             int i;
             int c;
             bool PalabraTerminada = false;
             r = 0;
             i = 0;
+            Texto = TbxCaptura5.Text.ToUpper();
             while (r < DgvMatriz4.RowCount)
             {
                 c = 0;
@@ -405,14 +402,15 @@ namespace PE26A_VVGD_P1
                     char letra;
 
                     letra = (char)DgvMatriz4.Rows[r].Cells[c].Value;
+                    DgvMatriz4.Rows[r].Cells[c].Style.BackColor = Color.White;
                     if (!PalabraTerminada)
                     {
-                        if (letra == TbxCaptura5.Text[i])
+                        if (letra == Texto[i])
                         {
                             DgvMatriz4.Rows[r].Cells[c].Style.BackColor = Color.Yellow;
                             i++;
 
-                            if (i == TbxCaptura5.Text.Length)
+                            if (i == Texto.Length)
                             {
                                 PalabraTerminada = true;
                             }
@@ -421,10 +419,70 @@ namespace PE26A_VVGD_P1
                     c++;
                 }
                 r++;
+                //Pintado Realizado
             }
         }
-        //Traza lineas para detectar la palabra Buscada
-    }    
-}
 
-        
+        //Pinta cada celda de la tabla 2
+        private void DgvMatriz2_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            Object Valor;
+            Point CentroCelda;
+            Pen Pluma1;
+
+
+            Rectangle RectanguloCelda;
+
+            //Prepara objetos de trabajo
+            Pluma1 = new Pen(Color.Red, 2);
+
+            CentroCelda = new Point();
+            
+
+            //Descartar Encabezados
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+            {
+                return;
+            }
+
+            //Pinta la celda normal
+            e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+            //Determina el valor de la celda
+            Valor = e.Value;
+
+            
+            if (e.CellStyle.BackColor == Color.Yellow)
+            {
+                MessageBox.Show(Valor.ToString());
+            }
+
+            //Dibuja la linea
+            if (Valor != null)
+            {
+              
+
+                if (e.CellStyle.BackColor == Color.Yellow)
+                {
+
+                    //Obtiene limites de la celda 
+                    RectanguloCelda = e.CellBounds;
+
+                    //Calculo Centro de la celda
+                    CentroCelda.X = RectanguloCelda.Left + RectanguloCelda.Width / 2;
+                    CentroCelda.Y = RectanguloCelda.Top + RectanguloCelda.Height / 2;
+
+                    //Dibuja Linea de diferentes colores dependiendo del numero en la celda
+                    e.Graphics.DrawLine(Pluma1, CentroCelda.X, CentroCelda.Y, CentroCelda.X-200, CentroCelda.Y);
+   
+
+                }
+            }
+            e.Handled = true;
+        }
+         #endregion
+
+
+
+    }
+}       
